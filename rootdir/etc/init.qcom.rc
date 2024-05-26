@@ -677,6 +677,10 @@ service vm_bms /vendor/bin/vm_bms
     group root
     disabled
 
+# Remove some data cache
+    rm /data/resource-cache
+    rm /data/system/package_cache
+
 # service for USERDEBUG
 service vendor.LKCore-dbg /vendor/bin/LKCore
     class late_start
